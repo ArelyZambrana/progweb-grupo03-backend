@@ -2,14 +2,14 @@ services:
   # Base de datos MySQL
   mysql:
     image: mysql:8.0
-    container_name: grupo04-mysql
+    container_name: grupo03-mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
     ports:
-      - "3304:3306" 
+      - "3303:3306" 
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
@@ -22,9 +22,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: grupo04-laravel
+    container_name: grupo03-laravel
     ports:
-      - "8004:80"
+      - "8003:80"
     environment:
       APP_ENV: production
       APP_KEY: ${APP_KEY}
