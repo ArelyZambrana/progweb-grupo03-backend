@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.btn {
+    @apply px-6 py-3 text-lg rounded-lg font-semibold text-white bg-green-700 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500;
+}
+
+.card {
+    @apply bg-white shadow-md rounded-lg p-4 mb-4;
+}
+
+body {
+    font-family: Arial, Verdana, sans-serif;
+}

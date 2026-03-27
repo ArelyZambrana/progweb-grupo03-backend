@@ -14,13 +14,13 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+    <body class="font-sans text-lg bg-gray-50 text-black">
+        <div class="min-h-screen flex flex-col">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
             @isset($header)
-                <header class="bg-white shadow">
+                <header class="bg-gray-800 text-white shadow border-b-4 border-black">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
@@ -28,9 +28,14 @@
             @endisset
 
             <!-- Page Content -->
-            <main>
+            <main class="flex-grow max-w-7xl mx-auto p-6 border-t-4 border-gray-800">
                 {{ $slot }}
             </main>
+
+            <!-- Footer -->
+            <footer class="bg-black text-white text-center py-4 border-t-4 border-gray-800">
+                <p>© 2026 Plataforma Accesible</p>
+            </footer>
         </div>
     </body>
 </html>
